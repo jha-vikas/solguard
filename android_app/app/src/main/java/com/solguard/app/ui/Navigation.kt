@@ -45,7 +45,7 @@ fun SolGuardNavigation(viewModel: SolGuardViewModel = viewModel()) {
                 session = session,
                 currentLux = liveLux,
                 onAssess = {
-                    fetchLocation(context) { lat, lon -> viewModel.setLocation(lat, lon) }
+                    fetchLocation(context) { lat, lon, alt -> viewModel.setLocation(lat, lon, alt) }
                     viewModel.assessUV()
                 },
                 onNavigateDetails = { navController.navigate(Screen.Details.route) },
@@ -78,13 +78,14 @@ fun SolGuardNavigation(viewModel: SolGuardViewModel = viewModel()) {
 @Suppress("MissingPermission")
 private fun fetchLocation(
     context: android.content.Context,
-    onResult: (Double, Double) -> Unit
+    onResult: (Double, Double, Double) -> Unit
 ) {
     try {
         val fusedClient = LocationServices.getFusedLocationProviderClient(context)
         fusedClient.lastLocation.addOnSuccessListener { location ->
             if (location != null) {
-                onResult(location.latitude, location.longitude)
+                val gpsAltitude = if (location.hasAltitude()) location.altitude else 0.0
+                onResult(location.latitude, location.longitude, gpsAltitude)
             }
         }
     } catch (_: SecurityException) {
