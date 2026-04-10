@@ -21,8 +21,12 @@ class SolGuardViewModel(application: Application) : AndroidViewModel(application
     private val _session = MutableStateFlow(loadPreferences(application))
     val session: StateFlow<SessionState> = _session.asStateFlow()
 
-    fun setLocation(lat: Double, lon: Double) {
-        _session.value = _session.value.copy(latitude = lat, longitude = lon)
+    fun setLocation(lat: Double, lon: Double, gpsAltitude: Double = 0.0) {
+        _session.value = _session.value.copy(
+            latitude = lat,
+            longitude = lon,
+            gpsAltitudeMeters = gpsAltitude
+        )
     }
 
     fun setSkinType(index: Int) {
@@ -47,8 +51,12 @@ class SolGuardViewModel(application: Application) : AndroidViewModel(application
         val sunPos = SunPositionCalculator.calculate(state.latitude, state.longitude, now)
         val sza = 90.0 - sunPos.altitude
 
-        val altitude = sensorReader.estimateAltitudeMeters().toDouble()
-            .let { if (it > 0) it else state.altitudeMeters }
+        val barometerAlt = sensorReader.estimateAltitudeMeters().toDouble()
+        val altitude = when {
+            barometerAlt > 0 -> barometerAlt
+            state.gpsAltitudeMeters > 0 -> state.gpsAltitudeMeters
+            else -> state.altitudeMeters
+        }
 
         val month = now.get(Calendar.MONTH)
 
