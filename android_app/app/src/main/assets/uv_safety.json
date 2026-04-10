@@ -1,0 +1,88 @@
+[
+  {
+    "category": "Low",
+    "uv_min": 0,
+    "uv_max": 2.9,
+    "color_hex": "#4CAF50",
+    "short_advice": "Enjoy the outdoors! Minimal sun protection needed.",
+    "detailed_actions": [
+      "Wear sunglasses on bright days",
+      "Use SPF 15 sunscreen if you burn easily",
+      "Great time for outdoor exercise"
+    ],
+    "hat": false,
+    "sunscreen": false,
+    "shade": false,
+    "sunglasses": true
+  },
+  {
+    "category": "Moderate",
+    "uv_min": 3,
+    "uv_max": 5.9,
+    "color_hex": "#FFEB3B",
+    "short_advice": "Take some precautions. Seek shade during midday.",
+    "detailed_actions": [
+      "Stay in shade near midday",
+      "Wear a hat and sunglasses",
+      "Apply SPF 15-30 sunscreen on exposed skin",
+      "Watch out if near water or sand (reflection increases UV)"
+    ],
+    "hat": true,
+    "sunscreen": true,
+    "shade": false,
+    "sunglasses": true
+  },
+  {
+    "category": "High",
+    "uv_min": 6,
+    "uv_max": 7.9,
+    "color_hex": "#FF9800",
+    "short_advice": "Protection essential. Reduce time in the sun 10am-4pm.",
+    "detailed_actions": [
+      "Reduce sun exposure between 10am and 4pm",
+      "Seek shade whenever possible",
+      "Wear protective clothing, wide-brim hat, sunglasses",
+      "Apply SPF 30+ sunscreen, reapply every 2 hours"
+    ],
+    "hat": true,
+    "sunscreen": true,
+    "shade": true,
+    "sunglasses": true
+  },
+  {
+    "category": "Very High",
+    "uv_min": 8,
+    "uv_max": 10.9,
+    "color_hex": "#FF5722",
+    "short_advice": "Extra protection needed. Avoid midday sun.",
+    "detailed_actions": [
+      "Avoid sun exposure between 10am and 4pm",
+      "Must seek shade during peak hours",
+      "Wear SPF 50+ and reapply every 90 minutes",
+      "Protective clothing, hat, and UV-blocking sunglasses essential",
+      "Check on children and elderly regularly"
+    ],
+    "hat": true,
+    "sunscreen": true,
+    "shade": true,
+    "sunglasses": true
+  },
+  {
+    "category": "Extreme",
+    "uv_min": 11,
+    "uv_max": 15,
+    "color_hex": "#9C27B0",
+    "short_advice": "Maximum protection required. Avoid ALL sun if possible.",
+    "detailed_actions": [
+      "Avoid outdoor sun exposure entirely if possible",
+      "If outdoors: full protective clothing, SPF 50+, wide-brim hat",
+      "Reapply sunscreen every 60-90 minutes",
+      "Stay indoors or in deep shade during 9am-5pm",
+      "Unprotected skin can burn in under 10 minutes"
+    ],
+    "hat": true,
+    "sunscreen": true,
+    "shade": true,
+    "sunglasses": true
+  }
+]

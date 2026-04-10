@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Sun circle -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,54m-16,0a16,16 0,1 1,32 0a16,16 0,1 1,-32 0"/>
+
+    <!-- Sun rays (8 rays around the circle) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeWidth="0"
+        android:pathData="M54,28L56.5,35.5L51.5,35.5Z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,80L56.5,72.5L51.5,72.5Z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M28,54L35.5,51.5L35.5,56.5Z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M80,54L72.5,51.5L72.5,56.5Z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M35.6,35.6L40.2,41.2L37.6,43.8Z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M72.4,72.4L67.8,66.8L70.4,64.2Z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M72.4,35.6L66.8,40.2L64.2,37.6Z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M35.6,72.4L41.2,67.8L43.8,70.4Z"/>
+
+    <!-- Shield outline (UV protection symbol) -->
+    <path
+        android:fillColor="#FFCC80"
+        android:pathData="M54,82C54,82 72,74 72,58V46L54,40L36,46V58C36,74 54,82 54,82Z"
+        android:fillAlpha="0.35"/>
+</vector>

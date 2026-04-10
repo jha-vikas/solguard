@@ -1,0 +1,8 @@
+#!/bin/sh
+# Gradle wrapper stub - Android Studio will regenerate this on first sync.
+# If you need to build from command line before opening Android Studio, run:
+#   gradle wrapper --gradle-version 8.11.1
+# from the android_app/ directory (requires Gradle to be installed).
+echo "Please open this project in Android Studio first, which will auto-generate the Gradle wrapper."
+echo "Or install Gradle and run: gradle wrapper --gradle-version 8.11.1"
+exit 1
