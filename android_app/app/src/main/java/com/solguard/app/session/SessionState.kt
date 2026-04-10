@@ -8,6 +8,7 @@ data class SessionState(
     val latitude: Double = 0.0,
     val longitude: Double = 0.0,
     val altitudeMeters: Double = 0.0,
+    val gpsAltitudeMeters: Double = 0.0,
     val uvIndex: Double = 0.0,
     val uvEstimate: UVEstimate? = null,
     val uvCategory: UVCategory? = null,
