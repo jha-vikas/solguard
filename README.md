@@ -130,3 +130,6 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) for detai
 - UV index categorization follows [WHO UV Index guidelines](https://www.who.int/news-room/questions-and-answers/item/radiation-the-ultraviolet-(uv)-index)
 - Skin type classification uses the [Fitzpatrick scale](https://en.wikipedia.org/wiki/Fitzpatrick_scale)
 - Sensor fusion approach adapted from the [Sunleaf](https://github.com/user/sunleaf) plant care app
+
+## Demo video
+- https://youtube.com/shorts/X7keLboTj3I?si=g5Tg-PqXa6HFTmJC
